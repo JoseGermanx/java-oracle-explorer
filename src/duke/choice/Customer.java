@@ -9,7 +9,7 @@ package duke.choice;
  * @author jgerm
  */
 public class Customer {
-    public String name;
-    public  String size;
-    
+     String name;
+     String size;
+
 }
