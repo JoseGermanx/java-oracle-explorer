@@ -17,25 +17,44 @@ public class ShopApp {
         double total;
     Customer c1 = new Customer();
     c1.name = "Pinky";
+    c1.size = "S";
+
     Clothing item1 = new Clothing();
     Clothing item2 = new Clothing();
     item1.decription = "Blue Jacket";
     item1.price = 20.9;
     item1.size = "M";
     
-    item2.decription = "Orange T-sHIRT";
+    item2.decription = "Orange T-Shirt";
     item2.price = 10.5;
     item2.size = "S";
     
-    System.out.println("El nombre del cliente es: " +c1.name+"");
-    System.out.println("Articulo 1: " +item1.decription+", Talla: "+item1.size+", Precio: "+item1.price+"");
-    System.out.println("Articulo 2: " +item2.decription+", Talla: "+item2.size+", Precio: "+item2.price+"");
+    System.out.println("The name of the client is: " +c1.name+"");
+    System.out.println("Item 1: " +item1.decription+", Size: "+item1.size+", Price: "+item1.price+"");
+    System.out.println("Item 2: " +item2.decription+", Size: "+item2.size+", Price: "+item2.price+"");
     
     total = item2.price*2 + item1.price;
     
     total = total*tax + total;
     System.out.println("Total a pagar: "+total+"");
-    
+
+        int measurement = 3;
+
+        switch (measurement) {
+            case 1, 2, 3 :
+                c1.size = "S";
+                break;
+            case 4, 5, 6:
+                c1.size = "M";
+                break;
+            case 7, 8, 9:
+                c1.size = "L";
+                break;
+            default:
+                c1.size = "X";
+                break;
+        }
+
     }
     
 }
