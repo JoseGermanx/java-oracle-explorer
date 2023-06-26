@@ -9,8 +9,27 @@ package duke.choice;
  * @author jgerm
  */
 public class Customer {
-     private String name;
-     private String size = "M";
+
+    private String name;
+    private String size = "M";
+
+    private Clothing[] items;
+
+    public void addItems(Clothing[] someItems) {
+        items = someItems;
+    }
+
+    public double getTotalClothingCost() {
+        double total = 0.0;
+        for (int i = 0; i < items.length; i++) {
+            total = total + items[i].getPrice();
+        }
+        return total;
+    }
+
+    public Clothing[] getItems() {
+        return items;
+    }
 
     public String getName() {
         return name;
@@ -27,7 +46,7 @@ public class Customer {
     public void setSize(String size) {
         this.size = size;
     }
-    
+
     public void setSize(int measurement) {
         switch (measurement) {
             case 1:
@@ -36,7 +55,7 @@ public class Customer {
                 setSize("S");
                 break;
             case 4:
-            case 5: 
+            case 5:
             case 6:
                 setSize("M");
                 break;
